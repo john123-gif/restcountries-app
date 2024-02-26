@@ -1,0 +1,18 @@
+.search-filter-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px auto auto auto;
+    width: 85%;
+    height: 50px;
+}
+
+@media only screen and (max-width: 375px){
+    .search-filter-div{
+        width: 90%;
+        height: auto;
+        margin-top: 30px;
+        flex-direction: column;
+        gap: 30px;
+    }
+}

@@ -1,0 +1,52 @@
+.load-row {
+    width: 100px;
+    min-height: 50vh;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .load-row span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: hsl(210, 45%, 11%);
+    border-radius: 50px;
+    animation: up-down6 0.5s ease-in infinite alternate;
+  }
+  
+  .load-row span:nth-child(2) {
+    background: hsl(210, 34%, 25%);
+    animation-delay: 0.16s;
+  }
+  
+  .load-row span:nth-child(3) {
+    background: hsl(210, 29%, 35%);
+    animation-delay: 0.32s;
+  }
+  
+  .load-row span:nth-child(4) {
+    background: hsl(209, 33%, 54%);
+    animation-delay: 0.48s;
+  }
+  .load-row span:nth-child(5) {
+    background: hsl(209, 43%, 75%);
+    animation-delay: 0.48s;
+  }
+
+  @keyframes up-down6 {
+    0% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateY(10px);
+    }
+  }
+  @media only screen and (max-width: 375px){
+    .load-row{
+      margin-top: 140px;
+    }
+  }
