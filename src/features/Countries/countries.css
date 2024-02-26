@@ -1,0 +1,97 @@
+.countries-grid{
+    width: 90%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 75vh;
+    display: grid;
+    gap: 60px 10px; 
+    grid-area: auto;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.country-card{
+    place-self: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    width: 250px;
+    height: 300px;
+}
+.img-div{
+    border-radius: 5px 5px 0 0;
+    margin: 0;
+    width: 100%;
+    height: 140px;
+}
+.country-img{
+    border-radius: inherit;
+    padding: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.country-description{
+    padding-left: 5px;
+    margin: 15px;
+    width: 200px;
+    height: 130px;
+}
+.country-name{
+    font-size: 15px;
+    margin: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: left;
+    font-weight: bolder;
+}
+.sub-details{
+    font-size: 12px;
+    font-weight: 300px;
+    line-height: 10px;
+    margin: 0;
+    padding: 0;
+}
+.detail-points{
+    font-weight: bold;
+}
+.no-result{
+    width: 200px;
+    text-align: center;
+    margin: 200px auto auto auto;
+    height: 55vh;
+}
+.rejected-message{
+    width: 230px;
+    text-align: center;
+    margin: 200px auto auto auto;
+    height: 50px;
+}
+
+
+@media only screen and (max-width: 375px){
+    .countries-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media only screen and (max-width: 675px){
+    .countries-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .country-card{
+        width: 220px;
+        height: 280px;
+    }
+}
+@media only screen and (min-width: 675px) and (max-width: 875px){
+    .countries-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .country-card{
+        width: 220px;
+        height: 280px;
+    }
+}
