@@ -1,46 +1,109 @@
-# Getting Started with Create React App
+## Table of contents
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-## Available Scripts
+## The challenge
 
-In the project directory, you can run:
+1. View the optimal layout for the site depending on their device's screen size
+2. See all countries from the API on the homepage
+3. Search for a country using an input field
+4. Filter countries by region
+5. Click on a country to see more detailed information on a separate page
+6. Click through to the border countries on the detail page
+7. Toggle the colour scheme between light and dark mode
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Links
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Solution URL: https://github.com/john123-gif/restcountries-app
+- Live Site URL: https://sparkly-palmier-374423.netlify.app
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## My process
 
-### `npm run build`
+I developed this rest countries api application using React, Redux & TypeScript.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Built with
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- [React](https://reactjs.org/) - JS library
+- [Redux](https://redux.js.org/) - React framework
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### What I learned
 
-### `npm run eject`
+Learnt alot from this project. For starters, I got to understand React and how to implement it, as it helps to reuse codes. Redux provides global accessibility of component data(state) and in conjunction with reduxtoolkit make it easy to manage.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To see how you can add code snippets, see below:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```React
+import './load.css'
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+export const Loader = () => {
+    return(
+        <div className="load-row">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    )
+}
+```
+```css
+input[type="search"]{
+    font-size: 14px;
+    color: hsl(0, 0%, 52%);
+    border: none;
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+}
+```
+```redux(reduxtoolkit)
+const initialState = "";
 
-## Learn More
+export const searchSlice = createSlice({
+    name: 'search',
+    initialState,
+    reducers: {
+        setSearchTerm: (state, action) => state = action.payload
+    }
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+});
+```
+```ts
+export const selectSearchTerm = (state: RootState) => state.search;
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Continued development
+-React
+-Redux (Reduxtoolkit)
+-Extensive use of API
+
+
+### Useful resources
+-[Codecademy] - Codecademy basically provided me with the entire knowledge needed to engineer this project(HTML, CSS, JavaScript, React and Redux). It's a great platform for learning.
+
+- [Developer Moxilla](https://www.developer.mozilla.org.com) - This site has an extensive interpretation of javaScript which helped me understand how to implement some concept in my project.
+
+- [Youtube](https://www.youtube.com) - I watched some example videos on how other developers develop thier project      using redux.
+
+- [uiverse](http://www.uiverse.io) - Provides countless open source UI element forany project.
+
+
+
+## Author
+-LinkedIn - [teyejohn](https://www.linkedin.com/in/teyejohn)
+-Github - [teyejohn](https://github.com/john123-gif)
+- Frontend Mentor - [@teyejohn](https://www.frontendmentor.io/profile/@teyejohn)
+# Rest-Countries-API-App
